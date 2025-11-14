@@ -25,7 +25,7 @@ body{
 }
 .header{
     width:100%;
-    border:1px solid black;
+    /* border:1px solid black; */
 }
 .header-container{
     max-width:1290px;
@@ -33,7 +33,7 @@ body{
     justify-content: space-between;
     align-items: center;
     margin:0 auto;
-    border:1px solid black;
+    /* border:1px solid black; */
     padding: 1rem;
     
 }
@@ -61,26 +61,47 @@ body{
   
     
 }
-@media screen and (min-width:768px) {
-    .navlist{
-        display: flex;
-    }
-    
-}
+
 .navlist a{
     color:rgb(113, 128, 150);
     font-size:18px;
     font-weight: 600;
     transform: color 0.1s ;
-      
+    
 }
 .navlist a:hover{
     color:var(--link-color);
 }
+
 .Contact-button{
     border: none;
     background-color: var(--primary-color);
     color: var(--background-color);
     padding: 0.8rem 1.5rem;
     border-radius:0.6rem;
+    display:none;
+    font-weight: 600;
+}
+.menubutton{
+    
+    background-color: var(--background-color);
+    border:none;
+    display: inline-block;
+    padding:0.5rem 0.9rem;
+}
+.menu-icon{
+    height:1.5rem;
+    width:1.5rem;
+}
+
+@media screen and (min-width:768px) {
+    .Contact-button{
+        display: block;
+    }
+    .navlist{
+        display: flex;
+    }
+   .menubutton{
+        display: none;
+   }
 }
