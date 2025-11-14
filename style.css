@@ -105,3 +105,129 @@ body{
         display: none;
    }
 }
+.content{
+width: 100%;
+}
+.main{
+    max-width: 1290px;
+display: flex;
+gap:2rem;
+flex-direction: column;
+
+align-items: center;
+margin:0 auto;
+/* border: 1px solid black; */
+padding:0.7rem;
+    
+
+}
+
+.main-intro{
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--primary-color);
+}
+.main-title{
+    font-size: 2.3rem;
+    font-weight: bold;
+    padding: 1.1rem;
+    color:var(--text-color);
+
+}
+.titleDescription{
+    font-size: 1.2rem;
+    color:var(--gray);
+    
+}
+.buttonGroup{
+    padding:1rem;
+    margin-top:1rem;
+    display: flex;
+    gap:2rem;
+justify-content: center;
+align-items: center;
+
+
+}
+.start,
+.tour{
+
+border: none;
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    padding: 0.8rem 1.5rem;
+    border-radius:0.6rem;
+    font-weight: 600;
+}
+.tour{
+    background:var(--dark-gray);
+}
+.start:hover{
+    background-color: var(--accent-color);
+}
+.tour:hover{
+    background-color: var(--gray);
+    
+}
+.left{
+    text-align: center;
+    opacity:0;
+    animation: slideleft 1s ease forwards;
+
+}
+@keyframes slideleft {
+    0%{
+        transform:translate(-100px);
+        opacity: 0;
+
+
+    }
+    100%{
+        transform: translate(0);
+        opacity:1
+    }
+}
+.right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.img-container{
+    
+    height: 50vh;
+    overflow: hidden;
+    border-radius: 1.22rem;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+    border:none;
+   
+
+}
+.img{
+    height: 100%;
+    width: 100%;
+}
+@media  screen and (min-width:768px) {
+    .main{
+        flex-direction:row;
+    }
+    .left{
+        max-width: 50%;
+        text-align: left;
+    }
+    .img-container{
+        height: 68vh;
+    }
+    .main-title{
+        font-size: 3.8rem;
+        padding-left: 0;
+
+    }
+    .main-intro{
+        padding-left: 0;
+        font-size: 1.3rem;
+    }
+    .buttonGroup{
+        justify-content: flex-start;
+        padding-left: 0;
+    }
+}
